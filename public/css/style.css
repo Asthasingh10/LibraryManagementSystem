@@ -1,0 +1,249 @@
+body{
+    overflow-x: hidden;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+    z-index: 21;
+}
+.navbar-collapse{
+    background-color: white;
+}
+.fa-solid{
+    font-size: 2rem;
+}
+.searchf{
+    position: relative;
+}
+#search{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+#search i{
+    font-size: 20px;
+    padding: 10px;
+}
+#searchTxt{
+    display: block;
+}
+/* footer */
+footer{
+    background-color: rgb(39, 39, 135);
+    color: white;
+    height: 55vh;
+}
+.footer-container{
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.items{
+    flex-direction: column;
+}
+.items>div>a{
+    text-decoration: none;
+    color: white;
+}
+.caption{
+    width: 25em;
+}
+.fa-book{
+    margin-left: 11rem;
+    margin-bottom: 2rem;
+}
+#copyright{
+   text-align: center;
+}
+/* index.ejs */
+.welcome{
+    text-align: center;
+    padding: 1rem;
+    text-decoration: underline;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+}
+.wavy{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
+}
+.wavy span{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out 2;
+    animation-delay: calc(0.1s*var(--i));
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
+}
+.frontPage{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+.frontPage>div>img{ 
+    margin: 2rem;
+    height: 50vh;
+    width: 30vw;
+    box-shadow: 3px 10px 22px #5f5e5e;
+    transition:0.6s;
+    border-radius:10px ;
+}
+.frontPage>div>img:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.itemOne{
+    margin-top: 2em;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    width: 30vw;
+}
+.rules{
+    margin: 2em;
+    letter-spacing: 1.5px;
+    line-height: 2em;
+}
+.contact{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+/* cards */
+.card{
+    border:  none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.library-link{
+    text-decoration: none;
+}
+.card-img-overlay:hover{
+    opacity: 0.1;
+    /* background-color: white; */
+}
+
+/* show page */
+.show-img{
+    height: 30vh ;
+}
+.btns{
+    display: flex;
+}
+
+/* signup form */
+.box{
+    height: 80vh;
+}
+
+/* about page */
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background: #4caf50;
+}
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-image img{
+    border-radius: 20px;
+    cursor: pointer;
+    max-width: 100%;
+    height: 100vh;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    border-radius: 20px;
+    transform: scale(1.2);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* check books */
+#blink{
+    animation-duration: 1000ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    font-size: 2em;
+    font-family: monospace;
+}
+@keyframes blink {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    
+}

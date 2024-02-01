@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container justify-content-center">
+    <a class="navbar-brand" href="/library">
+        <i class="fa-solid fa-book-open-reader"></i> Library</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto text-center mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/library">Home</a>
+          </li>      
+        </ul>
+        <form class="d-flex searchf"  role="search">
+          <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+          <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+        </form >
+        <div class="navbar-nav ms-auto">
+          <% if(!currUser){ %>
+            <a  class="btn btn-outline-primary me-2 " href="/signup">SignUp</a>
+            <a  class="btn btn-outline-primary me-2 " href="/login">LogIn</a>
+            <% } %>
+            <% if(currUser){ %>
+              <a  class="btn btn-outline-primary me-2 " href="/logout">Logout</a>
+            
+                <form action="/library/new" method="get">
+                    <button  class="btn btn-dark " >Add New Book </button>
+                </form>
+  
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

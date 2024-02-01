@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") -%>
+ <div class="row">
+        <div class="col-8 offset-2 mt-4">
+          <div class="text">
+            <div class="wavy">
+                <span style="--i:1;">A</span>
+                <span style="--i:2;">D</span>
+                <span style="--i:3;">D</span>
+                <span style="--i:4;"> </span>
+                <span style="--i:5;">A</span>
+                <span style="--i:6;"></span>
+                <span style="--i:7;">N</span>
+                <span style="--i:8;">E</span>
+                <span style="--i:9;">W</span>
+                <span style="--i:10;"> </span>
+                <span style="--i:11;">B</span>
+                <span style="--i:12;">O</span>
+                <span style="--i:13;">O</span>
+                <span style="--i:14;">K</span>            </div>
+        </div>
+        
+    <form action="/library" novalidate class="needs-validation" method="post" enctype="multipart/form-data">
+      <div  class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Add Book Title"   name="library[title]" required>
+            <div class="valid-feedback">Title looks good!</div>
+            <div class="invalid-feedback">Please enter title of book</div>
+      </div>
+      <div  class="mb-3">
+        <label for="title" class="form-label">Author Name</label>
+        <input type="text" class="form-control" placeholder="Add Author name" name="library[author]" required>
+        <div class="valid-feedback">Author Name looks good!</div>
+        <div class="invalid-feedback">Please enter author name of book</div>
+      </div>
+      <div  class="mb-3">
+        <label for="image" class="form-label">Book Image </label>
+        <input type="file" class="form-control" name="library[image]" required >
+        <div class="valid-feedback">Image looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label  for="category" class="form-label">Category</label>
+       <select name="library[category]" required class="form-select form-control" >
+          <option  disabled selected >Choose category...</option>
+          <option  name="library[category]"  value="fiction" >Fiction</option>
+          <option  name="library[category]"  value="non-fiction">Non-Fiction</option>
+          <option  name="library[category]"  value="Poetry">Poetry</option>
+          <option  name="library[category]"  value="Drama/Play">Drama/Play</option>
+          <option  name="library[category]"  value="Children's Book">Children's Book</option>
+          <option  name="library[category]"  value="Reference Book">Reference Book</option>
+          <option  name="library[category]"  value="Religion and Spirituality">Religion and Spirituality</option>
+          <option  name="library[category]"  value="Travel">Travel</option>
+          <option  name="library[category]"  value="Cookbooks">Cookbooks</option>
+          <option  name="library[category]"  value="Graphic Novels/Comics">Graphic Novels/Comics</option>
+        </select>
+       
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea required name="library[description]" class="form-control" ></textarea>
+        <div class="invalid-feedback">Please enter description of book</div>
+      </div>  
+      <button onclick="count()" class="btn btn-dark add-btn mt-3">Add</button> <br> <br> <br>
+    </form>
+</body>
+</div>
+</div>

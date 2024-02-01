@@ -1,0 +1,36 @@
+<% layout("/layouts/boilerplate") -%>
+
+<div class="row  login">
+    <div class="text">
+        <div class="wavy">
+            <span style="--i:1;">L</span>
+            <span style="--i:2;">O</span>
+            <span style="--i:3;">G</span>
+            <span style="--i:4;">I</span>
+            <span style="--i:5;">N</span>
+        </div>
+    </div>
+    
+    <div class="col-8  offset-2 ">
+        <form action="/login" method="post" novalidate class="needs-validation">
+            <div class="inputBox mt-4">
+                <label for="username" class="form-label">Username<i class="fa-solid fa-user"></i></label>
+                <input id="username" class="form-control" type="text" name="username" required>
+               <div class="invalid-feedback">
+                   Enter Username first !
+                  </div>
+            </div>
+            <div class="inputBox mt-4">
+                <label for="password" class="form-label">Password<i class="fa-solid fa-lock"></i></label>
+                <input type="password"  class="form-control" id="password" name="password" required>
+                <div class="invalid-feedback">
+                   Password required !! 
+                </div>
+            </div>
+            <div class="links mt-4">
+                <p>Don't have an account ? <a href="/signup">SignUp</a></p>
+            </div> 
+            <button class="btn btn-dark" >Login</button>
+        </form>
+    </div>
+</div>

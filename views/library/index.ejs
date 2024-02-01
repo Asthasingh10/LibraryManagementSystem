@@ -1,0 +1,237 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="text">
+    <div class="wavy">
+        <span style="--i:1;">W</span>
+        <span style="--i:2;">E</span>
+        <span style="--i:3;">L</span>
+        <span style="--i:4;">C</span>
+        <span style="--i:5;">O</span>
+        <span style="--i:6;">M</span>
+        <span style="--i:7;">E</span>
+        <span style="--i:8;"> </span>
+        <span style="--i:9;">T</span>
+        <span style="--i:10;">O</span>
+        <span style="--i:11;"> </span>
+        <span style="--i:12;">L</span>
+        <span style="--i:13;">I</span>
+        <span style="--i:14;">B</span>
+        <span style="--i:15;">R</span>
+        <span style="--i:16;">A</span>
+        <span style="--i:17;">R</span>
+        <span style="--i:18;">Y</span>
+    </div>
+</div>
+    <div>
+        <div class="frontPage">
+            <div class="itemOne">
+                <p>
+                    <b> 📚 Explore the World of Words:</b> <br>
+                   Step into a realm where words come alive and stories unfold.
+                    Our library is a sanctuary for book lovers, a haven for those seeking knowledge, imagination, and
+                    adventure.
+                </p>
+                <p>🌟<b>Diverse Collections Await You! </b> <br>
+                    Delve into our carefully curated collection of books spanning various genres and subjects.
+                    There's something for every reader.</p>
+            </div>
+            <div>
+                <img class="Img" src="/image/front.jpg" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="frontPage">
+            <div>
+                <img class="Img" src="/image/frontTwo.jpg" alt="">
+            </div>
+            <div class="itemOne">
+                <p>
+                    <b>📖 Your Literary Journey Begins Here:</b> <br>
+
+                    Whether you're a seasoned bibliophile or a novice explorer of books,
+                    our library invites you to embark on a journey of discovery. Uncover new worlds, ideas, and
+                    perspectives within our shelves.
+                </p>
+                <p><b>👥 Join Our Reading Community: </b> <br>
+                    Connect with fellow book enthusiasts, exchange recommendations, and participate in the vibrant
+                    discussions that thrive within
+                    our reading community. Your next favorite book might be a conversation away!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="rules">
+            <div class="text">
+                <div class="wavy">
+                    <span style="--i:1;">R</span>
+                    <span style="--i:2;">U</span>
+                    <span style="--i:3;">L</span>
+                    <span style="--i:4;">E</span>
+                    <span style="--i:5;">S</span>
+                    <span style="--i:6;"></span>
+                    <span style="--i:7;">O</span>
+                    <span style="--i:8;">F</span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:10;">O</span>
+                    <span style="--i:11;">U</span>
+                    <span style="--i:12;">R</span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:14;">L</span>
+                    <span style="--i:15;">I</span>
+                    <span style="--i:16;">B</span>
+                    <span style="--i:17;">R</span>
+                    <span style="--i:18;">A</span>
+                    <span style="--i:19;">R</span>
+                    <span style="--i:20;">Y</span>
+                </div>
+            </div>
+            
+            <ol type="1">
+                <li>
+                    <b>Library Membership:</b>
+                    <ul>
+                        <li>Users must have a valid library card to borrow materials.</li>
+                        <li>Obtain library card from library by paying amount of &#8377;100 as a fee of card.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Renewal Periods:</b>
+                    <ul>
+                        <li>The renewal limit of books is only 10 days.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Overdue Fines:</b>
+                    <ul>
+                        <li>After due date the charge perday on book is &#8377;10. </li>
+                        <li>Charge will be payed to the cash counter.</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <b>Lost or Damaged Items:</b>
+                    <ul>
+                        <li>In case if you damage the book then there is fine of &#8377;500. </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <b>Computer and Internet Use:</b>
+                    <ul>
+                        <li>If you are a registered user of library then we give you a fortigate password for use of
+                            Internet</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <b>Library Hours:</b>
+                    <ul>
+                        <li>The library will open 24 X 7.</li>
+                        <li>Only for special events or registered holidays library will be closed.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Quiet and Respectful Behavior:</b>
+                    <ul>
+                        <li>Maintain a quiet and respectful atmosphere in the library.</li>
+                    </ul>
+                </li>
+
+            </ol>
+        </div>
+        <hr>
+    </div>
+<div class="text">
+    <div class="wavy">
+        <span style="--i:1;">C</span>
+        <span style="--i:2;">H</span>
+        <span style="--i:3;">E</span>
+        <span style="--i:4;">C</span>
+        <span style="--i:5;">K</span>
+        <span style="--i:6;"> </span>
+        <span style="--i:7;">B</span>
+        <span style="--i:8;">O</span>
+        <span style="--i:9;">O</span>
+        <span style="--i:10;">K</span>
+        <span style="--i:11;">S</span>
+    </div>
+</div>
+<% if(!currUser){ %>
+<p id="blink">LOGIN TO ADD NEW BOOK</p>
+<% } %>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <% for(let book of allBooks){ %>
+            <a href="/library/<%= book._id %>" class="library-link">
+                <div class="card col" id="rect">
+                    <img src="<%= book.image.url  %>" class="card-img-top" alt="book_image" name="libray[image]" style="height: 20rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= book.title %>
+                        </h5>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+    </div>
+    
+    <div class="text">
+        <div class="wavy">
+            <span style="--i:1;">A</span>
+            <span style="--i:2;">B</span>
+            <span style="--i:3;">O</span>
+            <span style="--i:4;">U</span>
+            <span style="--i:5;">T</span>
+            <span style="--i:6;"> </span>
+            <span style="--i:7;">U</span>
+            <span style="--i:8;">S</span>
+        </div>
+    </div>
+ 
+    <div class="container">
+    <section class="about">
+        <div class="about-image">
+            <img src="/image/frontTwo.jpg" alt="Image">
+        </div>
+        <div class="about-content">
+            <h2>Introduction</h2>
+            <p>Welcome to our Library Management System, your go-to destination for accessing a wide range of books. Our company's journey began with a burning passion for literature, a desire to make books more accessible, and a commitment to fostering a love for reading. As avid readers ourselves, we identified the need for a seamless platform that connects book enthusiasts with their favorite titles.
+                Since our establishment, we have dedicated ourselves to providing a user-friendly experience that promotes a culture of reading. With years of experience in the industry, we have honed our skills in curating diverse book collections, implementing efficient library management systems, and offering top-notch customer support.
+            </p> <br>
+            <h2>Purpose & Goals</h2>
+            <p>At our core, we strive to make the world of books more accessible to everyone, transcending geographic boundaries and eliminating the constraints of traditional library systems. Our ultimate goal is to create a global community of passionate readers, fostering a love for literature and knowledge-sharing.
+                We aim to revolutionize the way people engage with books by leveraging technology to provide an immersive reading experience. By incorporating advanced features and seamless access to a vast collection of titles, we endeavor to inspire individuals to explore new literary realms, expand their horizons, and nurture their intellectual curiosity.</p>
+            </div>
+    </section>
+    </div>
+
+    <div class="text">
+        <div class="wavy">
+            <span style="--i:1;">L</span>
+            <span style="--i:2;">O</span>
+            <span style="--i:3;">C</span>
+            <span style="--i:4;">A</span>
+            <span style="--i:5;">T</span>
+            <span style="--i:6;">I</span>
+            <span style="--i:7;">O</span>
+            <span style="--i:8;">N</span>
+        </div>
+    </div> 
+    
+    <div class="contact">
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.141783004057!2d153.0095312!3d-27.464845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9150abedfe920b%3A0xf02a35bd721b500!2sSuncorp%20Stadium!5e0!3m2!1sen!2sin!4v1706287660419!5m2!1sen!2sin"
+                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+            <p>
+                <strong>Address:</strong>
+                <br>40 Castlemaine Street
+                <br> Milton QLD 4064
+            </p>
+            <p>
+                <strong>Phone:</strong>
+                <br>(07) 3331 5000
+            </p>
+        </div>
+    </div>
